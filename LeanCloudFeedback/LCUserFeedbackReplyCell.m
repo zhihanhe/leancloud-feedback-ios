@@ -223,11 +223,14 @@ static CGFloat const kBubbleArrowHeight = 14; /**< 气泡尖嘴的高度 */
 }
 
 - (UIImage *)backgroundImageForFeedbackReply:(LCUserFeedbackReply *)reply {
-	if (reply.type == LCReplyTypeDev) {
-		return [[UIImage imageNamed:@"feedback_bg_1"] stretchableImageWithLeftCapWidth:20 topCapHeight:16];
-	} else {
-		return [[UIImage imageNamed:@"feedback_bg_2"] stretchableImageWithLeftCapWidth:1 topCapHeight:16];;
-	}
+    NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
+    UIImage * feedback_bg_1 = [UIImage imageNamed:@"feedback_bg_1" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+    UIImage * feedback_bg_2 = [UIImage imageNamed:@"feedback_bg_2" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+    if (reply.type == LCReplyTypeDev) {
+        return [feedback_bg_1 stretchableImageWithLeftCapWidth:20 topCapHeight:16];
+    } else {
+        return [feedback_bg_2 stretchableImageWithLeftCapWidth:1 topCapHeight:16];;
+    }
 }
 
 - (NSString *)formatDateString:(NSString *)dateString {

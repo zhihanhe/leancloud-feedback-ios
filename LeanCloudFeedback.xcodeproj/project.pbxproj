@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		30DB6EC91EF3C11B00D00B7B /* room_bg_navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DB6EC81EF3C11B00D00B7B /* room_bg_navbar.png */; };
 		5CCAE1011B09B0FE009276B9 /* LeanCloudFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCAE1001B09B0FE009276B9 /* LeanCloudFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CCAE1241B09B323009276B9 /* LCUserFeedbackAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCAE1171B09B323009276B9 /* LCUserFeedbackAgent.m */; };
 		5CCAE1251B09B323009276B9 /* LCUserFeedbackThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCAE1181B09B323009276B9 /* LCUserFeedbackThread.m */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30DB6EC81EF3C11B00D00B7B /* room_bg_navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_bg_navbar.png; sourceTree = "<group>"; };
 		59AC16570E133BA472B3DABB /* Pods-LeanCloudFeedback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudFeedback.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudFeedback/Pods-LeanCloudFeedback.release.xcconfig"; sourceTree = "<group>"; };
 		5CCAE0FB1B09B0FE009276B9 /* LeanCloudFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanCloudFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCAE0FF1B09B0FE009276B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		703074BA1B9ABA6D00FD796E /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				30DB6EC81EF3C11B00D00B7B /* room_bg_navbar.png */,
 				703074E71B9ABDA400FD796E /* feedback_add_image@2x.png */,
 				703074BC1B9ABA6D00FD796E /* feedback_back@2x.png */,
 				703074BD1B9ABA6D00FD796E /* feedback_bg_1@2x.png */,
@@ -270,6 +273,7 @@
 				703074C41B9ABA6D00FD796E /* feedback_bg_1@2x.png in Resources */,
 				703074E81B9ABDA400FD796E /* feedback_add_image@2x.png in Resources */,
 				703074C71B9ABA6D00FD796E /* feedback_btn_new@2x.png in Resources */,
+				30DB6EC91EF3C11B00D00B7B /* room_bg_navbar.png in Resources */,
 				703074C31B9ABA6D00FD796E /* feedback_back@2x.png in Resources */,
 				703074C81B9ABA6D00FD796E /* feedback_warning@2x.png in Resources */,
 				7000FCF21BEC9E450097C729 /* LeanCloudFeedback.strings in Resources */,

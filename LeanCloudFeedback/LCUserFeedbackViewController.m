@@ -139,9 +139,11 @@ static CGFloat const kSendButtonWidth = 60;
 
 - (UIButton *)addImageButton {
     if (_addImageButton == nil) {
-        _addImageButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - kInputViewHeight, kAddImageButtonWidth, kInputViewHeight)];
+        _addImageButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64, kAddImageButtonWidth, kInputViewHeight)];
         _addImageButton.backgroundColor = kInputViewColor;
-        [_addImageButton setImage:[UIImage imageNamed:@"feedback_add_image"] forState:UIControlStateNormal];
+        NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
+        UIImage * feedback = [UIImage imageNamed:@"feedback_add_image" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+        [_addImageButton setImage:feedback forState:UIControlStateNormal];
         _addImageButton.contentMode = UIViewContentModeScaleAspectFill;
         [_addImageButton addTarget:self action:@selector(addImageButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -151,7 +153,7 @@ static CGFloat const kSendButtonWidth = 60;
 - (UIButton *)sendButton {
     if (_sendButton == nil) {
         _sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        _sendButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - kSendButtonWidth, CGRectGetHeight(self.view.frame) - kInputViewHeight, kSendButtonWidth, kInputViewHeight);
+        _sendButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - kSendButtonWidth, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64, kSendButtonWidth, kInputViewHeight);
         [_sendButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
         [_sendButton setTitleColor:[UIColor colorWithRed:137.0f/255 green:137.0f/255 blue:137.0f/255 alpha:1] forState:UIControlStateNormal];
         [_sendButton setTitle:LCLocalizedString(@"Send") forState:UIControlStateNormal];
@@ -183,8 +185,9 @@ static CGFloat const kSendButtonWidth = 60;
     switch (self.navigationBarStyle) {
         case LCUserFeedbackNavigationBarStyleBlue: {
             [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-            UIColor *blue =[UIColor colorWithRed:85.0f/255 green:184.0f/255 blue:244.0f/255 alpha:1];
-            self.navigationController.navigationBar.barTintColor = blue;
+            NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
+            UIImage * background = [UIImage imageNamed:@"room_bg_navbar" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
+            [self.navigationController.navigationBar setBackgroundImage:background forBarMetrics:UIBarMetricsDefault];
             self.closeButtonItem.tintColor = [UIColor whiteColor];
             break;
         }
