@@ -104,7 +104,8 @@ static CGFloat const kSendButtonWidth = 60;
 
 - (UIButton *)closeButton {
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *closeButtonImage = [UIImage imageNamed:@"feedback_back"];
+    NSBundle *frameWorkBundle = [NSBundle bundleForClass:[self class]];
+    UIImage * closeButtonImage = [UIImage imageNamed:@"feedback_back" inBundle:frameWorkBundle compatibleWithTraitCollection:nil];
     [closeButton setImage:closeButtonImage forState:UIControlStateNormal];
     closeButton.frame = CGRectMake(0, 0, closeButtonImage.size.width, closeButtonImage.size.height);
     closeButton.autoresizingMask = UIViewAutoresizingFlexibleHeight;
@@ -128,7 +129,7 @@ static CGFloat const kSendButtonWidth = 60;
 
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - kInputViewHeight)
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - kInputViewHeight - 64)
                                                       style:UITableViewStylePlain];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
