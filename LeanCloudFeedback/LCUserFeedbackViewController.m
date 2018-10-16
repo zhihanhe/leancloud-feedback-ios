@@ -332,7 +332,7 @@ static CGFloat const kSendButtonWidth = 60;
 - (void)prepareFeedbackWithBlock:(AVBooleanResultBlock)block {
     NSString *contact = [self currentContact];
     NSString *content = self.inputTextField.text;
-    if (_userFeedback) {
+    if (_userFeedback.objectId) {
         block(YES, nil);
     } else {
         _contact = contact;
