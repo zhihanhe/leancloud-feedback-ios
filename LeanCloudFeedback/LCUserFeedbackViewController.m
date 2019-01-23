@@ -164,9 +164,17 @@ static CGFloat const kSendButtonWidth = 60;
     return _sendButton;
 }
 
+- (CGFloat)bottomSafeHeight {
+    if (@available(iOS 11.0, *)) {
+        return self.view.safeAreaInsets.bottom;
+    } else {
+        return 5;
+    }
+}
+
 - (UITextField *)inputTextField {
     if (_inputTextField == nil) {
-        _inputTextField = [[UITextField alloc] initWithFrame:CGRectMake(kAddImageButtonWidth, CGRectGetMinY(self.sendButton.frame), CGRectGetWidth(self.view.frame)- kSendButtonWidth - kAddImageButtonWidth, kInputViewHeight)];
+        _inputTextField = [[UITextField alloc] initWithFrame:CGRectMake(kAddImageButtonWidth, CGRectGetMinY(self.sendButton.frame) - [self bottomSafeHeight], CGRectGetWidth(self.view.frame)- kSendButtonWidth - kAddImageButtonWidth, kInputViewHeight)];
         _inputTextField.tag = TAG_InputFiled;
         [_inputTextField setFont:[UIFont systemFontOfSize:12]];
         _inputTextField.backgroundColor = kInputViewColor;
