@@ -65,6 +65,17 @@ static CGFloat const kSendButtonWidth = 60;
     [self loadFeedbackThreads];
 }
 
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    _tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - kInputViewHeight - 64 - [self bottomSafeHeight]);
+    _addImageButton.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64 - [self bottomSafeHeight], kAddImageButtonWidth, kInputViewHeight);
+    _sendButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - kSendButtonWidth, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64 - [self bottomSafeHeight], kSendButtonWidth, kInputViewHeight);
+    _inputTextField.frame = CGRectMake(kAddImageButtonWidth,
+                                       CGRectGetMinY(self.sendButton.frame) - [self bottomSafeHeight] - [self bottomSafeHeight],
+                                       CGRectGetWidth(self.view.frame)- kSendButtonWidth - kAddImageButtonWidth,
+                                       kInputViewHeight);
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
