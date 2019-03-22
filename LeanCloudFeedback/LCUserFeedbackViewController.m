@@ -59,19 +59,21 @@ static CGFloat const kSendButtonWidth = 60;
 
 - (void)viewDidLoad
 {
+    self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
     [self setupUI];
 //    [self keyboardWillHide:nil];
     [self loadFeedbackThreads];
+    
 }
 
 - (void)viewSafeAreaInsetsDidChange {
     [super viewSafeAreaInsetsDidChange];
-    _tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - kInputViewHeight - 64 - [self bottomSafeHeight]);
-    _addImageButton.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64 - [self bottomSafeHeight], kAddImageButtonWidth, kInputViewHeight);
-    _sendButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - kSendButtonWidth, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64 - [self bottomSafeHeight], kSendButtonWidth, kInputViewHeight);
+    _tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - kInputViewHeight - [self bottomSafeHeight]);
+    _addImageButton.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - kInputViewHeight - [self bottomSafeHeight], kAddImageButtonWidth, kInputViewHeight);
+    _sendButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - kSendButtonWidth, CGRectGetHeight(self.view.frame) - kInputViewHeight - [self bottomSafeHeight], kSendButtonWidth, kInputViewHeight);
     _inputTextField.frame = CGRectMake(kAddImageButtonWidth,
-                                       CGRectGetMinY(self.sendButton.frame) - [self bottomSafeHeight] - [self bottomSafeHeight],
+                                       CGRectGetHeight(self.view.frame) - kInputViewHeight - [self bottomSafeHeight],
                                        CGRectGetWidth(self.view.frame)- kSendButtonWidth - kAddImageButtonWidth,
                                        kInputViewHeight);
 }
@@ -409,7 +411,7 @@ static CGFloat const kSendButtonWidth = 60;
 
 - (void)updateHeightWhenKeyboardHide:(UIView *)bottomView {
     CGRect bottomViewFrame = bottomView.frame;
-    bottomViewFrame.origin.y = self.view.bounds.size.height - bottomViewFrame.size.height;
+    bottomViewFrame.origin.y = self.view.bounds.size.height - bottomViewFrame.size.height - [self bottomSafeHeight];
     bottomView.frame = bottomViewFrame;
 }
 
