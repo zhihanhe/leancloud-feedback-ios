@@ -62,7 +62,7 @@ static CGFloat const kSendButtonWidth = 60;
     self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
     [self setupUI];
-//    [self keyboardWillHide:nil];
+    //    [self keyboardWillHide:nil];
     [self loadFeedbackThreads];
     
 }
@@ -103,7 +103,7 @@ static CGFloat const kSendButtonWidth = 60;
     [self.view addSubview:self.addImageButton];
     [self.view addSubview:self.sendButton];
     [self.view addSubview:self.inputTextField];
-
+    
     [[[LCUserFeedbackReplyCell class] appearance] setCellFont:self.feedbackCellFont];
     
     [self.tableView addSubview:self.refreshControl];
@@ -134,7 +134,7 @@ static CGFloat const kSendButtonWidth = 60;
             [closeButton addTarget:self action:@selector(closeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
             _closeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
         }
-
+        
     }
     return _closeButtonItem;
 }
@@ -143,7 +143,7 @@ static CGFloat const kSendButtonWidth = 60;
 - (UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - kInputViewHeight - 64)
-                                                      style:UITableViewStylePlain];
+                                                  style:UITableViewStylePlain];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -269,7 +269,7 @@ static CGFloat const kSendButtonWidth = 60;
 - (void)handleRefresh:(id)sender {
     [self loadFeedbackThreads];
 }
- 
+
 #pragma mark - util
 
 - (void)alertWithTitle:(NSString *)title message:(NSString *)message {
@@ -551,5 +551,7 @@ static CGFloat const kSendButtonWidth = 60;
 }
 
 @end
+
+
 
 
