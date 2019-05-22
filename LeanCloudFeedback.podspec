@@ -11,8 +11,7 @@ Pod::Spec.new do |s|
     :text => "Copyright 2015 LeanCloud, Inc. See https://leancloud.cn/terms.html"
   }
   s.author   = { "LeanCloud" => "support@leancloud.cn" }
-  #s.source   = { :git => "https://github.com/leancloud/leancloud-feedback-ios.git", :tag => s.version.to_s }
-  s.source_files  = 'LeanCloudFeedback'
+  s.source   = { :git => "https://github.com/leancloud/leancloud-feedback-ios.git", :tag => s.version.to_s }
 
   s.source_files        = "LeanCloudFeedback/**/*.{h,m}"
   s.public_header_files = "LeanCloudFeedback/**/*.h"
