@@ -136,5 +136,28 @@ block(first_param, error); \
     return NSLocalizedStringFromTableInBundle(key, nil, bundle, key);
 }
 
++ (NSBundle *)lcck_bundleForName:(NSString *)bundleName class:(Class)aClass {
+    NSString *customizedBundlePath = [LCUtils lcck_customizedBundlePathForBundleName:bundleName];
+    NSBundle *customizedBundle = [NSBundle bundleWithPath:customizedBundlePath];
+    if (customizedBundle) {
+        return customizedBundle;
+    }
+    NSString *bundlePath = [LCUtils lcck_bundlePathForBundleName:bundleName class:aClass];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    return bundle;
+}
+
++ (NSString *)lcck_customizedBundlePathForBundleName:(NSString *)bundleName {
+    NSString *customizedBundlePathComponent = [NSString stringWithFormat:@"CustomizedChatKit.%@.bundle", bundleName];
+    NSString *customizedBundlePath =[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:customizedBundlePathComponent];
+    return customizedBundlePath;
+}
+
++ (NSString *)lcck_bundlePathForBundleName:(NSString *)bundleName class:(Class)aClass {
+    NSString *pathComponent = [NSString stringWithFormat:@"%@.bundle", bundleName];
+    NSString *bundlePath =[[[NSBundle bundleForClass:aClass] resourcePath] stringByAppendingPathComponent:pathComponent];
+    return bundlePath;
+}
+
 @end
 
