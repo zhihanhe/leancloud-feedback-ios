@@ -38,7 +38,6 @@
 		5CCAE1361B09C1F2009276B9 /* LCHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCAE1321B09C1F2009276B9 /* LCHttpClient.h */; };
 		5CCAE1371B09C1F2009276B9 /* LCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCAE1331B09C1F2009276B9 /* LCUtils.m */; };
 		5CCAE1381B09C1F2009276B9 /* LCUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCAE1341B09C1F2009276B9 /* LCUtils.h */; };
-		7000FCF21BEC9E450097C729 /* LeanCloudFeedback.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7000FCF11BEC9E450097C729 /* LeanCloudFeedback.strings */; };
 		703074C31B9ABA6D00FD796E /* feedback_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703074BC1B9ABA6D00FD796E /* feedback_back@2x.png */; };
 		703074C41B9ABA6D00FD796E /* feedback_bg_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703074BD1B9ABA6D00FD796E /* feedback_bg_1@2x.png */; };
 		703074C51B9ABA6D00FD796E /* feedback_bg_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703074BE1B9ABA6D00FD796E /* feedback_bg_2@2x.png */; };
@@ -48,6 +47,7 @@
 		703074E81B9ABDA400FD796E /* feedback_add_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703074E71B9ABDA400FD796E /* feedback_add_image@2x.png */; };
 		70FB0B271B5E76D500FD8D70 /* LCUserFeedbackImageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FB0B251B5E76D500FD8D70 /* LCUserFeedbackImageViewController.h */; };
 		70FB0B281B5E76D500FD8D70 /* LCUserFeedbackImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FB0B261B5E76D500FD8D70 /* LCUserFeedbackImageViewController.m */; };
+		A16B48762295737400A222B8 /* Lan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A16B48752295737400A222B8 /* Lan.bundle */; };
 		FA5979E6FAE10100718387EA /* libPods-LeanCloudFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62FC55FE5788FF58EC0BC812 /* libPods-LeanCloudFeedback.a */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,6 @@
 		5CCAE1331B09C1F2009276B9 /* LCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUtils.m; sourceTree = "<group>"; };
 		5CCAE1341B09C1F2009276B9 /* LCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCUtils.h; sourceTree = "<group>"; };
 		62FC55FE5788FF58EC0BC812 /* libPods-LeanCloudFeedback.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeanCloudFeedback.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7000FCF11BEC9E450097C729 /* LeanCloudFeedback.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LeanCloudFeedback.strings; sourceTree = "<group>"; };
 		703074BC1B9ABA6D00FD796E /* feedback_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback_back@2x.png"; sourceTree = "<group>"; };
 		703074BD1B9ABA6D00FD796E /* feedback_bg_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback_bg_1@2x.png"; sourceTree = "<group>"; };
 		703074BE1B9ABA6D00FD796E /* feedback_bg_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback_bg_2@2x.png"; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		70FB0B1E1B5E0E4F00FD8D70 /* LCUserFeedbackReply_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCUserFeedbackReply_Internal.h; sourceTree = "<group>"; };
 		70FB0B251B5E76D500FD8D70 /* LCUserFeedbackImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCUserFeedbackImageViewController.h; sourceTree = "<group>"; };
 		70FB0B261B5E76D500FD8D70 /* LCUserFeedbackImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserFeedbackImageViewController.m; sourceTree = "<group>"; };
+		A16B48752295737400A222B8 /* Lan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lan.bundle; sourceTree = "<group>"; };
 		D94FDB034BF527C80C647B30 /* Pods-LeanCloudFeedback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudFeedback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudFeedback/Pods-LeanCloudFeedback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +164,7 @@
 		703074BA1B9ABA6D00FD796E /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A16B48752295737400A222B8 /* Lan.bundle */,
 				30DB6EC81EF3C11B00D00B7B /* room_bg_navbar.png */,
 				703074E71B9ABDA400FD796E /* feedback_add_image@2x.png */,
 				703074BC1B9ABA6D00FD796E /* feedback_back@2x.png */,
@@ -172,7 +173,6 @@
 				703074BF1B9ABA6D00FD796E /* feedback_btn@2x.png */,
 				703074C01B9ABA6D00FD796E /* feedback_btn_new@2x.png */,
 				703074C11B9ABA6D00FD796E /* feedback_warning@2x.png */,
-				7000FCF11BEC9E450097C729 /* LeanCloudFeedback.strings */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -253,6 +253,8 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
+				"zh-Hant",
+				ar,
 			);
 			mainGroup = 5CCAE0F11B09B0FE009276B9;
 			productRefGroup = 5CCAE0FC1B09B0FE009276B9 /* Products */;
@@ -273,10 +275,10 @@
 				703074C41B9ABA6D00FD796E /* feedback_bg_1@2x.png in Resources */,
 				703074E81B9ABDA400FD796E /* feedback_add_image@2x.png in Resources */,
 				703074C71B9ABA6D00FD796E /* feedback_btn_new@2x.png in Resources */,
+				A16B48762295737400A222B8 /* Lan.bundle in Resources */,
 				30DB6EC91EF3C11B00D00B7B /* room_bg_navbar.png in Resources */,
 				703074C31B9ABA6D00FD796E /* feedback_back@2x.png in Resources */,
 				703074C81B9ABA6D00FD796E /* feedback_warning@2x.png in Resources */,
-				7000FCF21BEC9E450097C729 /* LeanCloudFeedback.strings in Resources */,
 				703074C51B9ABA6D00FD796E /* feedback_bg_2@2x.png in Resources */,
 				703074C61B9ABA6D00FD796E /* feedback_btn@2x.png in Resources */,
 			);

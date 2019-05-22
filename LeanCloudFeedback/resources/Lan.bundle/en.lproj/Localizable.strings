@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  LeanCloudFeedback
+
+  Created by zhihanhe on 2019/5/22.
+  Copyright © 2019 LeanCloud. All rights reserved.
+*/
+"Detail"="Detail";
+"Email Or QQ"="Email Or QQ";
+"Please write your feedback"="Please write your feedback";
+"Send"="Send";
+"User Feedback"="User Feedback";

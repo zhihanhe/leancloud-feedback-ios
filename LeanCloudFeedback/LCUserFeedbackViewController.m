@@ -96,7 +96,7 @@ static CGFloat const kSendButtonWidth = 60;
         self.navigationItem.leftBarButtonItem = self.closeButtonItem;
     }
     
-    [self.navigationItem setTitle:LCLocalizedString(@"User Feedback")];
+    [self.navigationItem setTitle:[LCUtils lcck_getLocalizedString:@"User Feedback"]];
     [self setupNavigaionBar];
     
     [self.view addSubview:self.tableView];
@@ -170,7 +170,7 @@ static CGFloat const kSendButtonWidth = 60;
         _sendButton.frame = CGRectMake(CGRectGetWidth(self.view.frame) - kSendButtonWidth, CGRectGetHeight(self.view.frame) - kInputViewHeight - 64, kSendButtonWidth, kInputViewHeight);
         [_sendButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
         [_sendButton setTitleColor:[UIColor colorWithRed:137.0f/255 green:137.0f/255 blue:137.0f/255 alpha:1] forState:UIControlStateNormal];
-        [_sendButton setTitle:LCLocalizedString(@"Send") forState:UIControlStateNormal];
+        [_sendButton setTitle:[LCUtils lcck_getLocalizedString:@"Send"] forState:UIControlStateNormal];
         [_sendButton setBackgroundColor: kInputViewColor];
         [_sendButton addTarget:self action:@selector(sendButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -191,7 +191,7 @@ static CGFloat const kSendButtonWidth = 60;
         _inputTextField.tag = TAG_InputFiled;
         [_inputTextField setFont:[UIFont systemFontOfSize:12]];
         _inputTextField.backgroundColor = kInputViewColor;
-        _inputTextField.placeholder = LCLocalizedString(@"Please write your feedback");
+        _inputTextField.placeholder = [LCUtils lcck_getLocalizedString:@"Please write your feedback"];
         UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 30)];
         _inputTextField.leftView = paddingView;
         _inputTextField.leftViewMode = UITextFieldViewModeAlways;
@@ -526,7 +526,7 @@ static CGFloat const kSendButtonWidth = 60;
     self.tableViewHeader.tag = TAG_TABLEView_Header;
     [self.tableViewHeader setBackgroundColor:[UIColor colorWithRed:247.0f/255 green:248.0f/255 blue:248.0f/255 alpha:1]];
     self.tableViewHeader.textAlignment = NSTextAlignmentLeft;
-    self.tableViewHeader.placeholder = LCLocalizedString(@"Email Or QQ");
+    self.tableViewHeader.placeholder = [LCUtils lcck_getLocalizedString:@"Email Or QQ"];
     [self.tableViewHeader setFont:[UIFont systemFontOfSize:12.0f]];
     if (_contact) {
         self.tableViewHeader.text = _contact;

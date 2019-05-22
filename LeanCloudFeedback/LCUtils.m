@@ -131,5 +131,10 @@ block(first_param, error); \
     return error;
 }
 
++ (NSString *) lcck_getLocalizedString:(NSString *)key {
+    NSBundle *bundle = [NSBundle lcck_bundleForName:@"Lan" class:[self class]];
+    return NSLocalizedStringFromTableInBundle(key, nil, bundle, key);
+}
+
 @end
 

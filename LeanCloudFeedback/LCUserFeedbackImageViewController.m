@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = LCLocalizedString(@"Detail");
+    self.title = [LCUtils lcck_getLocalizedString:@"Detail"];
     [self.view addSubview:self.imageView];
 }
 

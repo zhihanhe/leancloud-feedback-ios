@@ -68,4 +68,6 @@
 
 + (NSError *)errorWithText:(NSString *)format,... NS_FORMAT_FUNCTION(1, 2);
 
++ (NSString *) lcck_getLocalizedString:(NSString *)key;
+
 @end
