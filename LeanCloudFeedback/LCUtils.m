@@ -133,7 +133,8 @@ block(first_param, error); \
 
 + (NSString *) lcck_getLocalizedString:(NSString *)key {
     NSBundle *bundle = [LCUtils lcck_bundlePathForBundleName:@"Lan" class:[LCUtils class]];
-    return NSLocalizedStringFromTableInBundle(key, nil, bundle, key);
+//    return NSLocalizedStringFromTableInBundle(key, nil, bundle, key);
+    return NSLocalizedStringFromTableInBundle(name, @"Lan.bundle", [NSBundle bundleForClass:[self class]], nil);
 }
 
 + (NSString *)lcck_bundlePathForBundleName:(NSString *)bundleName class:(Class)aClass {
