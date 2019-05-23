@@ -47,7 +47,7 @@
 		703074E81B9ABDA400FD796E /* feedback_add_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 703074E71B9ABDA400FD796E /* feedback_add_image@2x.png */; };
 		70FB0B271B5E76D500FD8D70 /* LCUserFeedbackImageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FB0B251B5E76D500FD8D70 /* LCUserFeedbackImageViewController.h */; };
 		70FB0B281B5E76D500FD8D70 /* LCUserFeedbackImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FB0B261B5E76D500FD8D70 /* LCUserFeedbackImageViewController.m */; };
-		A16B48762295737400A222B8 /* Lan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A16B48752295737400A222B8 /* Lan.bundle */; };
+		A16B48762295737400A222B8 /* FeedBackLan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A16B48752295737400A222B8 /* FeedBackLan.bundle */; };
 		FA5979E6FAE10100718387EA /* libPods-LeanCloudFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62FC55FE5788FF58EC0BC812 /* libPods-LeanCloudFeedback.a */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +83,7 @@
 		70FB0B1E1B5E0E4F00FD8D70 /* LCUserFeedbackReply_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCUserFeedbackReply_Internal.h; sourceTree = "<group>"; };
 		70FB0B251B5E76D500FD8D70 /* LCUserFeedbackImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCUserFeedbackImageViewController.h; sourceTree = "<group>"; };
 		70FB0B261B5E76D500FD8D70 /* LCUserFeedbackImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserFeedbackImageViewController.m; sourceTree = "<group>"; };
-		A16B48752295737400A222B8 /* Lan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lan.bundle; sourceTree = "<group>"; };
+		A16B48752295737400A222B8 /* FeedBackLan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FeedBackLan.bundle; sourceTree = "<group>"; };
 		D94FDB034BF527C80C647B30 /* Pods-LeanCloudFeedback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeanCloudFeedback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeanCloudFeedback/Pods-LeanCloudFeedback.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,7 +164,7 @@
 		703074BA1B9ABA6D00FD796E /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				A16B48752295737400A222B8 /* Lan.bundle */,
+				A16B48752295737400A222B8 /* FeedBackLan.bundle */,
 				30DB6EC81EF3C11B00D00B7B /* room_bg_navbar.png */,
 				703074E71B9ABDA400FD796E /* feedback_add_image@2x.png */,
 				703074BC1B9ABA6D00FD796E /* feedback_back@2x.png */,
@@ -275,7 +275,7 @@
 				703074C41B9ABA6D00FD796E /* feedback_bg_1@2x.png in Resources */,
 				703074E81B9ABDA400FD796E /* feedback_add_image@2x.png in Resources */,
 				703074C71B9ABA6D00FD796E /* feedback_btn_new@2x.png in Resources */,
-				A16B48762295737400A222B8 /* Lan.bundle in Resources */,
+				A16B48762295737400A222B8 /* FeedBackLan.bundle in Resources */,
 				30DB6EC91EF3C11B00D00B7B /* room_bg_navbar.png in Resources */,
 				703074C31B9ABA6D00FD796E /* feedback_back@2x.png in Resources */,
 				703074C81B9ABA6D00FD796E /* feedback_warning@2x.png in Resources */,
