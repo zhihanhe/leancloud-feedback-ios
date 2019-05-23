@@ -132,9 +132,9 @@ block(first_param, error); \
 }
 
 + (NSString *) lcck_getLocalizedString:(NSString *)key {
-    NSBundle *bundle = [LCUtils lcck_bundlePathForBundleName:@"FeedBackLan" class:[LCUtils class]];
-//    return NSLocalizedStringFromTableInBundle(key, nil, bundle, key);
-    return NSLocalizedStringFromTableInBundle(name, nil, [NSBundle bundleForClass:[self class]], nil);
+    NSBundle *bundle = [NSBundle bundleWithPath:[LCUtils lcck_bundlePathForBundleName:@"FeedBackLan" class:[LCUtils class]]];
+    return NSLocalizedStringFromTableInBundle(key, nil, bundle, key);
+//    return NSLocalizedStringFromTableInBundle(name, nil, [NSBundle bundleForClass:[self class]], nil);
 }
 
 + (NSString *)lcck_bundlePathForBundleName:(NSString *)bundleName class:(Class)aClass {
