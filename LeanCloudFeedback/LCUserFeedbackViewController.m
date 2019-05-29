@@ -525,7 +525,7 @@ static CGFloat const kSendButtonWidth = 60;
     self.tableViewHeader.delegate = (id <UITextFieldDelegate>) self;
     self.tableViewHeader.tag = TAG_TABLEView_Header;
     [self.tableViewHeader setBackgroundColor:[UIColor colorWithRed:247.0f/255 green:248.0f/255 blue:248.0f/255 alpha:1]];
-    self.tableViewHeader.textAlignment = NSTextAlignmentLeft;
+    self.tableViewHeader.textAlignment = NSTextAlignmentNatural;
     self.tableViewHeader.placeholder = [LCUtils lcck_getLocalizedString:@"Email Or QQ"];
     [self.tableViewHeader setFont:[UIFont systemFontOfSize:12.0f]];
     if (_contact) {
