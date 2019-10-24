@@ -33,7 +33,7 @@
     LCUserFeedbackViewController *feedbackViewController = [[LCUserFeedbackViewController alloc] init];
     feedbackViewController.feedbackTitle = title;
     feedbackViewController.contact = contact;
-    
+    feedbackViewController.contactHeaderHidden = YES;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedbackViewController];
     [viewController presentViewController:navigationController animated:YES completion:^{
     }];
